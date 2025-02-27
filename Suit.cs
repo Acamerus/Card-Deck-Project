@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 public enum Suit
 {
-	//enum class that contains suits for cards
-	
-	Spades,
-	Clubs,
-	Hearts,
-	Diamonds
+    //enum class that contains suits for cards
+    Clubs,
+    Diamonds,
+    Hearts,
+    Spades
 }
-

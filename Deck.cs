@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+namespace Cards;
 
 public class Deck
 {
@@ -35,8 +35,8 @@ public class Deck
         }
 				else
         {
-          Card topCard = cards[0];
-          cards.RemoveAt(0);
+          Card topCard = cards[cards.Count -1];
+          cards.RemoveAt(cards.Count -1);
           return topCard;
         }
     }
@@ -64,5 +64,11 @@ public class Deck
       
       cards = remainingCards.Concat(cutCards).ToList();
     }
-}
 
+   // Print method
+   public void Print() {
+      foreach(Card card in cards) {
+        Console.WriteLine(card.Rank + " of " + card.Suit);
+      }
+   }
+}
