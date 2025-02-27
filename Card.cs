@@ -25,9 +25,16 @@ public class Card
     public Rank Rank { get; private set; }
     public bool Faceup { get; private set; }
 
+    public Card(Rank rank, Suit suit)
+    {
+        Rank = rank;
+        Suit = suit;
+        Faceup = false;
+    }
     public void FlipOver()
     {
         //implementation 
+        Faceup = !Faceup;
     }
         
 }
